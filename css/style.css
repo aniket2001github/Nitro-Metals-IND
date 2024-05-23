@@ -1645,7 +1645,7 @@ select:focus {
 .main-slider .slide-content .big-title{
 	position: relative;
 	font-size: 60px;
-	color: #ffffff;
+	color: #000000;
 	font-weight: 400;
     text-transform: none;
 	line-height: 1.2em;
