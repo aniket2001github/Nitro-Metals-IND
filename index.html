@@ -36,10 +36,76 @@
 
         <div class="preloader"></div>
 
-        <a href="https://wa.me/+919321669822" class="whatsapp-button" target="_blank">
+        <!-- <a href="https://wa.me/+919321669822" class="whatsapp-button" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        </a>
+        </a> -->
 
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                // Create the anchor element
+                const whatsappButton = document.createElement('a');
+                whatsappButton.href = 'https://wa.me/+919321669822';
+                whatsappButton.target = '_blank';
+                whatsappButton.className = 'whatsapp-button';
+
+                // Create the image element
+                const whatsappImage = document.createElement('img');
+                whatsappImage.src = 'https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg';
+                whatsappImage.alt = 'WhatsApp';
+
+                // Append the image to the anchor
+                whatsappButton.appendChild(whatsappImage);
+
+                // Append the anchor to the body
+                document.body.appendChild(whatsappButton);
+            });
+
+            // Add the CSS styles dynamically
+            const style = document.createElement('style');
+            style.innerHTML = `
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        text-decoration: none;
+        animation: pulse 2s infinite;
+    }
+
+    .whatsapp-button:hover {
+        transform: scale(1.2);
+    }
+
+    .whatsapp-button img {
+        width: 30px;
+        height: 30px;
+    }
+`;
+            document.head.appendChild(style);
+        </script>
+
+        
         <!-- Start Top Bar area -->
         <section class="top-bar-area">
             <div class="container">
@@ -152,13 +218,19 @@
                                                         <li><a href="Stainless-Steel-Flanges.html">Flanges</a></li>
                                                         <li><a href="Stainless-Steel-rods.html">Rods </a></li>
                                                         <li><a href="Stainless-Steel-Pipe.html">Pipes</a></li>
-                                                        <li><a href="Stainless-Steel-Fasterners.html">Fasterners</a></li>
-                                                        <li><a href="Stainless-SteelButweld-Fittings.html">Butweld fittings </a></li>
+                                                        <li><a href="Stainless-Steel-Fasterners.html">Fasterners</a>
+                                                        </li>
+                                                        <li><a href="Stainless-SteelButweld-Fittings.html">Butweld
+                                                                fittings </a></li>
                                                         <li><a href="Stainless-Steel-Valves.html">Valves</a></li>
-                                                        <li><a href="Stainless-Steel-Circle.html">Stainless Steel Circle</a></li>
-                                                        <li><a href="Stainless-Steel-Angle.html">Stainless Steel Angle</a></li>
-                                                        <li><a href="Stainless-Steel-Channel.html">Stainless Steel Channel</a></li>
-                                                        <li><a href="Stainless-Steel-Ring.html">Stainless Steel Ring</a></li>
+                                                        <li><a href="Stainless-Steel-Circle.html">Stainless Steel
+                                                                Circle</a></li>
+                                                        <li><a href="Stainless-Steel-Angle.html">Stainless Steel
+                                                                Angle</a></li>
+                                                        <li><a href="Stainless-Steel-Channel.html">Stainless Steel
+                                                                Channel</a></li>
+                                                        <li><a href="Stainless-Steel-Ring.html">Stainless Steel Ring</a>
+                                                        </li>
                                                     </ul>
                                                     <div class="dropdown-btn"></div>
                                                 </li>
@@ -173,7 +245,8 @@
                                                         <li><a href="Copper-Wire.html">Wire</a></li>
                                                         <li><a href="Copper-Round Bar.html">Round Bar</a></li>
                                                         <li><a href="Copper-Square Bar.html">Square Bar</a></li>
-                                                        <li><a href="Copper-Finned Tube.html">Copper Finned Tube</a></li>
+                                                        <li><a href="Copper-Finned Tube.html">Copper Finned Tube</a>
+                                                        </li>
                                                     </ul>
                                                     <div class="dropdown-btn"></div>
                                                 </li>
@@ -196,14 +269,18 @@
                                         </li>
 
                                         <li><a href="Quality.html">Quality</a></li>
-                                   
+
                                         <li class="dropdown"><a href="#">Tech Info</a>
                                             <ul>
                                                 <li><a href="Chemical-compositions.html">Chemical compositions</a></li>
-                                                <li><a href="Mechanical-composition.html">Mechanical composition </a></li>
-                                                <li><a href="Brass-Alloy-Composition.html">Brass Alloy Composition</a></li>
-                                                <li><a href="Copper-Alloy-Composition.html">Copper Alloy Composition</a></li>
-                                                <li><a href="Stainless-Steel-Composition.html">Stainless Steel Composition</a></li>
+                                                <li><a href="Mechanical-composition.html">Mechanical composition </a>
+                                                </li>
+                                                <li><a href="Brass-Alloy-Composition.html">Brass Alloy Composition</a>
+                                                </li>
+                                                <li><a href="Copper-Alloy-Composition.html">Copper Alloy Composition</a>
+                                                </li>
+                                                <li><a href="Stainless-Steel-Composition.html">Stainless
+                                                        Steel Composition</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="contact.html">Contact</a></li>
@@ -233,7 +310,8 @@
                                     <ul>
                                         <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                         <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                        <li><a href="http://wa.me/+919321669822"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                                        <li><a href="http://wa.me/+919321669822"><i class="fa fa-whatsapp"
+                                                    aria-hidden="true"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -495,7 +573,8 @@
                         <span>Solutions</span>
                         <div class="border2"></div>
                     </div>
-                    <p>We are currently serving major industries globally with our extensive range of world class products.</p>
+                    <p>We are currently serving major industries globally with our extensive range of
+                        world class products.</p>
                 </div>
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
@@ -627,7 +706,7 @@
         </section>
         <!--End services style1 area-->
 
-     
+
 
         <!--Start Featured project area-->
         <section class="featured-project-area">
@@ -990,8 +1069,8 @@
         </section>
         <!--End Featured project area-->
 
-           <!--Start growth area-->
-           <section class="growth-area">
+        <!--Start growth area-->
+        <section class="growth-area">
             <div class="growth-chart-image">
                 <img src="images/resources/growth-chart-bg.jpg" alt="Awesome Image">
             </div>
@@ -1157,7 +1236,7 @@
                                 <div class="title">
                                     <h3>Range of Products</h3>
                                 </div>
-                               
+
                             </div>
                         </div>
                     </div>
@@ -1185,7 +1264,7 @@
                                 <div class="title">
                                     <h3>Orders fulfille</h3>
                                 </div>
-                              
+
                             </div>
                         </div>
                     </div>
@@ -1221,7 +1300,8 @@
                                             </div>
                                         </div>
                                         <div class="text-holder">
-                                            <h3>Cutting</h3> <p>Shaping by removing material.</p>
+                                            <h3>Cutting</h3>
+                                            <p>Shaping by removing material.</p>
                                         </div>
                                     </div>
                                 </li>
@@ -1277,10 +1357,13 @@
         <!--End working process area-->
 
 
-       
+
         <!--Start Map Quote area-->
         <section class="map-quote-area">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.422419982775!2d72.8233536758043!3d18.95694295569809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce164952bae5%3A0xc7d1aecee8a23824!2sJamnadas%20Building%2C%20Islampura%20Rd%2C%20Charni%20Road%20East%2C%20Cawasji%20Patel%20Tank%2C%20Bhuleshwar%2C%20Mumbai%2C%20Maharashtra%20400004!5e0!3m2!1sen!2sin!4v1716398139477!5m2!1sen!2sin" width="1920" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.422419982775!2d72.8233536758043!3d18.95694295569809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce164952bae5%3A0xc7d1aecee8a23824!2sJamnadas%20Building%2C%20Islampura%20Rd%2C%20Charni%20Road%20East%2C%20Cawasji%20Patel%20Tank%2C%20Bhuleshwar%2C%20Mumbai%2C%20Maharashtra%20400004!5e0!3m2!1sen!2sin!4v1716398139477!5m2!1sen!2sin"
+                width="1920" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="container quote-content clearfix">
                 <div class="view-map">
                     <a href="contact.html">View On Map</a>
@@ -1294,9 +1377,9 @@
                                     <li>
                                         <span>Address</span>
                                         <p>OFFICE NO.17, 94/100, JAMNADAS BULLDING,
-                                            MARUTI MANDIR MARG, 5TH KUMBHARWADA, 
-                                            MUMBAI-400004 
-                                            </p>
+                                            MARUTI MANDIR MARG, 5TH KUMBHARWADA,
+                                            MUMBAI-400004
+                                        </p>
                                     </li>
                                     <li>
                                         <span>Phone</span>
@@ -1382,7 +1465,8 @@
                                                 </li>
                                                 <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                                                 </li>
-                                                <li><a href="http://wa.me/+919321669822"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                                                <li><a href="http://wa.me/+919321669822"><i class="fa fa-whatsapp"
+                                                            aria-hidden="true"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1411,8 +1495,8 @@
                         </div>
                     </div>
                     <!--End single footer widget-->
-                     <!--Start single footer widget-->
-                     <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12">
+                    <!--Start single footer widget-->
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12">
                         <div class="single-footer-widget marbtm50">
                             <div class="title">
                                 <h3>Copper Products</h3>
